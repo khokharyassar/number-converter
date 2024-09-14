@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Converter</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number Converter</h1>
+        <div class="input-area">
+            <label for="textInput">Normal Text</label>
+            <input type="text" id="textInput" placeholder="Enter Text" oninput="convertFromText()" />
+
+            <label for="binaryInput">Binary:</label>
+            <div class="result">
+                <input type="text" id="binaryInput" placeholder="Enter Binary" oninput="convertFromBinary()" />
+                <button onclick="copyToClipboard('binaryInput', this)">Copy</button>
+            </div>
+
+            <label for="octalInput">Octal:</label>
+            <div class="result">
+                <input type="text" id="octalInput" placeholder="Enter Octal" oninput="convertFromOctal()" />
+                <button onclick="copyToClipboard('octalInput', this)">Copy</button>
+            </div>
+
+            <label for="decimalInput">Decimal:</label>
+            <div class="result">
+                <input type="text" id="decimalInput" placeholder="Enter Decimal" oninput="convertFromDecimal()" />
+                <button onclick="copyToClipboard('decimalInput', this)">Copy</button>
+            </div>
+
+            <label for="hexInput">Hexadecimal:</label>
+            <div class="result">
+                <input type="text" id="hexInput" placeholder="Enter Hexadecimal" oninput="convertFromHex()" />
+                <button onclick="copyToClipboard('hexInput', this)">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
